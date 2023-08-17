@@ -13,7 +13,6 @@
     "@fontsource/poppins": "^5.0.8",
     "@phosphor-icons/vue": "^2.1.6",
     "axios": "^1.4.0",
-    "axios-mock-adapter": "^1.21.5",
     "pinia": "^2.1.4",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"

@@ -1,9 +1,10 @@
-import axios from "axios"
-import MockAdapter from "axios-mock-adapter"
-import { AUTH_CREDENTIALS } from "@/helpers/credentials";
+import axios from 'axios'
 
-const mock = new MockAdapter(axios)
+export const api = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL
+})
 
-mock.onGet("/login").reply(200, AUTH_CREDENTIALS);
-
-export const api = axios.create({});
+api.interceptors.request.use((config) => {
+  config.headers['Authorization'] = `Bearer ${localStorage.getItem('token')}`
+  return config;
+})

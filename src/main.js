@@ -1,5 +1,5 @@
 import './assets/main.css'
-import '@fontsource/poppins';
+import '@fontsource/poppins'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
